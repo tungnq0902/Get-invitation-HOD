@@ -1,0 +1,10 @@
+- Truy cập trang https://www.hackthebox.eu/invite
+- Mở cửa sổ elements
+- Đọc script phát hiện đoạn script mang tên /js/inviteapi.min.js đc gọi từ địa chỉ https://www.hackthebox.eu/js/inviteapi.min.js
+- Truy cập địa chỉ trên ta có đc một đoạn Script
+- Copy vào đoạn Script trên vào http://jsnice.org/ để format lại đoạn script giúp dễ đọc. Phát hiện có một function tên "makeInviteCode()"
+- Quay lại trang web gọi function trên từ console. Trang web trả lại một Object chứa 1 đoạn String được mã hóa kiểu BASE64
+- Giải mã đoạn String nhận được một tin nhắc: "In order to generate the invite code, make a POST request to /api/invite/generate"
+- Gửi lệnh POST vào địa chỉ "https://www.hackthebox.eu/api/invite/generate" ta nhận được đoạn mã "VkZNQVAtSlpPRk8tRlhSSUQtSUtBVkEtQkdBU04="
+- Giải mã BASE64 đoạn mã trên ta nhận được đoạn code "VFMAP-JZOFO-FXRID-IKAVA-BGASN" chính là inviteCode
+- Quay lại trang đăng ký, điền thông tin và hoàn tất đăng ký.
